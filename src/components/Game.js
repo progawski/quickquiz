@@ -16,8 +16,6 @@ export default function Game(props) {
             .catch(err => console.log(err))
     }, [])
 
-    console.log(questionsData)
-
     let questions = [];
 
     if(questionsData !== null){
@@ -28,9 +26,23 @@ export default function Game(props) {
         })
     }
 
+    function checkAnswers() {
+        
+    }
+
     return(
-        <div className="questions-container" >
-           { questionsData !== null? questions : <h1>Waiting...</h1>}
-        </div>
+        <>
+            {questionsData === null? <h1>Waiting</h1> :
+            <>
+                <div className="questions-container" >
+                    {questions}
+                </div>
+                <div className="summary-container">
+                    <div className="summary-text">You scored X correct answers</div>
+                    <button className="button" onClick={checkAnswers}>Check answers</button>
+                </div>
+                </>
+            }
+        </>
     )
 } 

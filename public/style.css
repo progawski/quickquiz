@@ -104,6 +104,7 @@ ul{
    margin: 0;
    padding: 0;
    display: flex;
+   flex-wrap: wrap;
    width: 100%;
    gap: 10px;
 }
@@ -128,4 +129,25 @@ li:active{
     box-shadow: inset 1px 2px 3px 1px rgba(0, 0, 0, 0.3);
     background-color: rgb(212, 212, 212);
     transition: all .1s ease-in-out;
+}
+
+.summary-container{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-top: 20px;
+}
+
+.summary-text{
+    margin-right: 20px;
+}
+
+.grayed-out-answer{
+    border-color: #d2d8bb;
+    color: #d2d8bb;
+}
+
+.selected-answer{
+    border-color: #d4e395;
+    background-color: #d4e395;
 }
