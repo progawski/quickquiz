@@ -6,9 +6,6 @@ export default function App(){
 
   const [newGame, setNewGame] = React.useState(false);
 
-
-
-
   function startNewGame() {
     setNewGame(true);
   }
