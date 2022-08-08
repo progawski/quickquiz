@@ -7,12 +7,12 @@ export default function App(){
   const [newGame, setNewGame] = React.useState(false);
 
   function startNewGame() {
-    setNewGame(true);
+    setNewGame(prevNewGame => !prevNewGame);
   }
 
   return(
     <main>
-          {newGame? <Game startNewGame={startNewGame} newGame={newGame}/> : <Home startNewGame={startNewGame}/>}
+          {newGame? <Game startNewGame={startNewGame}/> : <Home startNewGame={startNewGame}/>}
     </main>
 
   )
