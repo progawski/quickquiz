@@ -12,6 +12,7 @@ export default function App(){
 
   return(
     <main>
+          {/* Change the screen depends on game state */}
           {newGame? <Game startNewGame={startNewGame}/> : <Home startNewGame={startNewGame}/>}
     </main>
 

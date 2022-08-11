@@ -23,6 +23,7 @@ export default function Answer(props) {
         color: '#ffffff'
     }
 
+    // Set the proper style
     if(props.isSelected){
         if(props.gameover){
             props.isCorrect? style = correctStyle : style = incorrectStyle;
